@@ -1,0 +1,54 @@
+.header {
+    position: relative;
+    width: 100vw;
+    height: 150px;
+    background: $main-bg;
+    margin: 0;
+    padding: 0;
+    left: 0;
+}
+.menu-bar {
+    position: absolute;
+    width: 100vw;
+    height: 50px;
+    background: $main-color;
+    transform: translateY(-50%);
+    top: 50%;  
+    border: 2px solid $border-color;
+}
+.logo-holder {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: $main-color;
+    top: 50%;
+    transform: translate(0,-50%);
+    left: 5%;
+    z-index: 1;
+    box-shadow: 3px 3px 30px $border-color;
+    border-radius:  8px;
+    transition: 1s;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.15) translate(0,-45%);
+        transition: 1s;
+    }
+}
+.menu-list {
+    list-style: none;
+    display: flex;
+    & li {
+        padding-left: 10px;
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: $border-color;
+        
+    }
+}
+.menu-items {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    right: 0;
+    width: 50%;
+}
