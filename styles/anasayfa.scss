@@ -19,7 +19,8 @@
     transition: transform 0.6s;
     transform-style: preserve-3d;
     border:none;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
   }
   
   .flip-card:hover .flip-card-inner {
@@ -34,12 +35,15 @@
   }
   
   .flip-card-front {
-    background-color: #bbb;
-    color: black;
+    background-color: #a7a9aa;
+    color: rgb(5, 61, 43);
+    font-family: fantasy;
   }
   
   .flip-card-back {
-    background-color: #2980b9;
-    color: white;
+    background-color: #a7a9aa;
+    color: rgb(5, 61, 43);
     transform: rotateY(180deg);
+    font-family: fantasy;
+    text-transform: uppercase;
   }

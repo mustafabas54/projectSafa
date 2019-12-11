@@ -10,16 +10,16 @@ const Header = () => {
                 <div className='menu-items'>
                     <ul className='menu-list'>
                         <li>
-                            Anasayfa
+                        <a href="#"> Anasayfa </a>
                         </li>
                         <li>
-                            Ürünler
+                        <a href="#"> Ürünler </a>
                         </li>
                         <li>
-                            Fiyat Listesi
+                        <a href="#"> Fiyat Listesi </a>
                         </li>
                         <li>
-                            İletişim
+                        <a href="#"> İletişim </a>
                         </li>
                     </ul>
                 </div>

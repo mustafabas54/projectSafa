@@ -1,0 +1,10 @@
+.ayrinti {
+    margin-top: 5%;
+    padding: 30px;
+    transition: 2s;
+}
+.ayrinti img:hover {
+    transform: scale(1.15);
+    transition: 2s;
+    cursor: pointer;
+}

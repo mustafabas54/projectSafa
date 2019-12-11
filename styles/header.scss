@@ -37,12 +37,15 @@
 .menu-list {
     list-style: none;
     display: flex;
-    & li {
-        padding-left: 40px;
+    & li a{
+        padding-left: 30px;
         font-weight: 600;
         font-size: 1.2rem;
-        color: $border-color;
-        
+        color: rgb(201, 200, 199);
+        text-decoration: none; 
+    } 
+    &a:hover {
+        color: rgb(255, 123, 0);
     }
 }
 .menu-items {

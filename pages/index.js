@@ -1,5 +1,6 @@
 import Layout from '../components/layout'
 import items from '../components/carditems'
+import '../styles/ayrinti.scss'
 import { 
     Container,
     Row,
@@ -8,8 +9,7 @@ import {
     CardImg,
     CardText,
     CardBody,
-    CardTitle,
-    Button
+    CardTitle
  } from 'reactstrap';
 const Cards = items => {
     return (
@@ -21,13 +21,19 @@ const Cards = items => {
                             <div className='flip-card-front'>
                                 <CardImg className='card-img' src={item.url} alt="Card image cap" />
                                     <CardBody>
-                                    <CardTitle>{item.title}</CardTitle>
-                                    <CardText>{item.description}</CardText>
-                                    <Button>Button</Button>
-                                </CardBody>
+                                        <CardTitle>{item.title}</CardTitle>
+                                        <CardText>{item.description}</CardText>
+                                    </CardBody>
                             </div>
                             <div className='flip-card-back'>
                             <CardImg className='card-img' src={item.url} alt="Card image cap" />
+                            <CardBody>
+                                    <CardText>{item.urun1}</CardText>
+                                    <CardText>{item.porFiyat}</CardText>
+                                    <CardText>{item.ekFiyat}</CardText>
+                                    <CardText>{item.dürFiyat}</CardText>
+                                    <CardText>{item.pidFiyat}</CardText>
+                                </CardBody>
                             </div>
                         </div>
                     </Card>
@@ -36,6 +42,7 @@ const Cards = items => {
         })
     )
 }
+
 const Index = () => {
     return (
         <Layout>
@@ -44,9 +51,27 @@ const Index = () => {
                     <Row>
                         {Cards(items)}
                     </Row>
-                </Container>  
-                
-            </div>
+                </Container>
+                </div>
+                <div className='ayrinti'>
+                <Container>
+                    <Row>
+                        <Col sm='3'>
+                            <img src='/img/gunmenusu.jpg'></img>
+                        </Col>
+                        <Col sm='3'>
+                            <img src='/img/foto.jpg'></img>
+                        </Col>
+                        <Col sm='3'>
+                            <img src='/img/basin.jpg'></img>
+                        </Col>
+                        <Col sm='3'>
+                            <img src='/img/yorumla.jpg'></img>
+                        </Col>
+                    </Row>
+                </Container>
+                </div>
+            
         </Layout>
     )
 }
