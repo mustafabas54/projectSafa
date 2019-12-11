@@ -1,5 +1,5 @@
 import Layout from '../components/layout'
-import React from 'react';
+import items from '../components/carditems'
 import { 
     Container,
     Row,
@@ -11,28 +11,38 @@ import {
     CardTitle,
     Button
  } from 'reactstrap';
-
+const Cards = items => {
+    return (
+        items.map(item => {
+            return (
+                <Col sm='4' key={item.id} className='mt-5'>
+                    <Card className='flip-card'>
+                        <div className='flip-card-inner'>
+                            <div className='flip-card-front'>
+                                <CardImg className='card-img' src={item.url} alt="Card image cap" />
+                                    <CardBody>
+                                    <CardTitle>{item.title}</CardTitle>
+                                    <CardText>{item.description}</CardText>
+                                    <Button>Button</Button>
+                                </CardBody>
+                            </div>
+                            <div className='flip-card-back'>
+                            <CardImg className='card-img' src={item.url} alt="Card image cap" />
+                            </div>
+                        </div>
+                    </Card>
+                </Col>
+            )
+        })
+    )
+}
 const Index = () => {
     return (
         <Layout>
             <div className='cards'>
                 <Container>
                     <Row>
-                        <Col sm='4'>
-                            <Card>
-                                <CardImg top width="100%" src="/img/ciger.jpg" alt="Card image cap" />
-                                <CardBody>
-                                <CardTitle>Card title</CardTitle>
-                                <CardSubtitle>Card subtitle</CardSubtitle>
-                                <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                                <Button>Button</Button>
-                                </CardBody>
-                            </Card>
-                        </Col>
-                        <Col sm='4'>
-                        </Col>
-                        <Col sm='4'>
-                        </Col>
+                        {Cards(items)}
                     </Row>
                 </Container>  
                 
