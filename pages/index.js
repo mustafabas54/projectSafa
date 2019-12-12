@@ -66,7 +66,7 @@ const Index = () => {
                         </Col>
                         <Col sm='3' className='Calendar'>
                             <FontAwesomeIcon icon={faCamera} className='fontawesome' size='5x' color='red'/>
-                            <h4>Galeri</h4>
+                            <h4><a href='/urunler'>GaleRi</a></h4>
                         </Col>
                         <Col sm='3' className='Calendar'>
                             <FontAwesomeIcon icon={faNewspaper} className='fontawesome' size='5x' color='red'/>
