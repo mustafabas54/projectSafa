@@ -47,3 +47,10 @@
     font-family: fantasy;
     text-transform: uppercase;
   }
+
+  .fontawesome{
+    color: blue;
+    &:hover{
+      color: pink;
+    }
+  }

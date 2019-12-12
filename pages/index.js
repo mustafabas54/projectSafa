@@ -1,5 +1,7 @@
 import Layout from '../components/layout'
 import items from '../components/carditems'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faNewspaper } from '@fortawesome/free-solid-svg-icons'
 import '../styles/ayrinti.scss'
 import { 
     Container,
@@ -63,7 +65,7 @@ const Index = () => {
                             <img src='/img/foto.jpg'></img>
                         </Col>
                         <Col sm='3'>
-                            <img src='/img/basin.jpg'></img>
+                            <FontAwesomeIcon icon={faNewspaper} className='fontawesome' size='7x' color='red'/>
                         </Col>
                         <Col sm='3'>
                             <img src='/img/yorumla.jpg'></img>

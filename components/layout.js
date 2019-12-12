@@ -1,9 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/index.scss'
 import Header from './header'
-import '../styles/layout.scss'
-
-
 
 const Layout = (props) => {
     return (
