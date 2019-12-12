@@ -37,16 +37,18 @@
 .menu-list {
     list-style: none;
     display: flex;
-    & li a{
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    top: 15%;
+    & li {
+        font-family: inherit; ;
         padding-left: 30px;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 1.2rem;
         color: rgb(201, 200, 199);
         text-decoration: none; 
     } 
-    &a:hover {
-        color: rgb(255, 123, 0);
-    }
 }
 .menu-items {
     position: absolute;
@@ -64,5 +66,19 @@
 @media screen and (max-width: 820px){
     .menu-list{
         display: none;
+    }
+}
+.menus {
+    color :white;
+}
+.header-menu-link {
+    margin: 10px;
+    color: rgb(19, 255, 235);
+    text-decoration: none;
+    transition: .4s;
+    &:hover {
+        color: tomato;
+        transition: .4s;
+        text-decoration: none;
     }
 }

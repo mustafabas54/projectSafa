@@ -1,4 +1,4 @@
-
+import Link from 'next/link'
 
 const Header = () => {
     return (
@@ -10,16 +10,16 @@ const Header = () => {
                 <div className='menu-items'>
                     <ul className='menu-list'>
                         <li>
-                        <a href="#"> Anasayfa </a>
+                            <Link href='/'><a className='header-menu-link'>Anasayfa</a></Link>
                         </li>
                         <li>
-                        <a href="#"> Ürünler </a>
+                            <Link href='/urunler'><a className='header-menu-link'>Ürünlerimiz</a></Link>
                         </li>
                         <li>
-                        <a href="#"> Fiyat Listesi </a>
+                            <Link href='/fiyatlistesi'><a className='header-menu-link'>Fiyat Listesi</a></Link>
                         </li>
                         <li>
-                        <a href="#"> İletişim </a>
+                            <Link href='/iletisim'><a className='header-menu-link'>İletişim</a></Link>
                         </li>
                     </ul>
                 </div>

@@ -1,8 +1,9 @@
 import Layout from '../components/layout'
 import items from '../components/carditems'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faNewspaper } from '@fortawesome/free-solid-svg-icons'
+import { faNewspaper, faCamera, faComments, faCalendar } from '@fortawesome/free-solid-svg-icons'
 import '../styles/ayrinti.scss'
+import Hamburger from '../components/hamburger'
 import { 
     Container,
     Row,
@@ -48,6 +49,7 @@ const Cards = items => {
 const Index = () => {
     return (
         <Layout>
+
             <div className='cards'>
                 <Container>
                     <Row>
@@ -58,17 +60,21 @@ const Index = () => {
                 <div className='ayrinti'>
                 <Container>
                     <Row>
-                        <Col sm='3'>
-                            <img src='/img/gunmenusu.jpg'></img>
+                        <Col sm='3' className='Calendar'>
+                            <FontAwesomeIcon icon={faCalendar} className='fontawesome' size='5x' color='red'/>
+                            <h4>Günün Menüsü</h4>
                         </Col>
-                        <Col sm='3'>
-                            <img src='/img/foto.jpg'></img>
+                        <Col sm='3' className='Calendar'>
+                            <FontAwesomeIcon icon={faCamera} className='fontawesome' size='5x' color='red'/>
+                            <h4>Galeri</h4>
                         </Col>
-                        <Col sm='3'>
-                            <FontAwesomeIcon icon={faNewspaper} className='fontawesome' size='7x' color='red'/>
+                        <Col sm='3' className='Calendar'>
+                            <FontAwesomeIcon icon={faNewspaper} className='fontawesome' size='5x' color='red'/>
+                            <h4>Basında Biz</h4>
                         </Col>
-                        <Col sm='3'>
-                            <img src='/img/yorumla.jpg'></img>
+                        <Col sm='3' className='Calendar'>
+                            <FontAwesomeIcon icon={faComments} className='fontawesome' size='5x' color='red'/>
+                            <h4>Müşteri Yorumları</h4>
                         </Col>
                     </Row>
                 </Container>

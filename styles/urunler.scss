@@ -1,0 +1,59 @@
+.card-imgg {
+    width: 100%;
+    object-fit: cover;
+    height: 250px;
+    transition: 1s;
+    &:hover {
+        transform: scale(1.13);
+    }
+}
+.cardd {
+    border: 2px solid gray;
+    margin: 10px;
+}
+h3 {
+    margin: 10px;
+    padding: 15px;
+    font-size: 30px;
+    color: lawngreen;
+    background-color: gray;
+}
+.mobile-menu {
+    height: 0;
+    width: 100vw;
+    background: rgb(54, 53, 53);
+    list-style: none;
+    text-align: center;
+    overflow: hidden;
+    padding: 0;
+    z-index: 7;
+    left: 0;
+    font-family: 'Bree Serif', serif;
+    border-radius: 8px;
+}
+.mobile-menu li{
+    margin: 10px;
+}
+
+.mobile-menu li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+@media screen and (max-width: 820px){
+    .hamburger{
+        display: inline;
+    }
+    .menu{
+        display: none;
+    }
+    .mobile-menu{
+        transition: 1s;
+        position: fixed;
+        color: white;
+        margin: 0;
+    }
+    .mobile-menu.active {
+        height: 50vh;
+        transition: 1s;
+    }
+}
