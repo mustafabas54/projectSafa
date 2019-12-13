@@ -3,6 +3,7 @@ import items from '../components/carditems'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faNewspaper, faCamera, faComments, faCalendar } from '@fortawesome/free-solid-svg-icons'
 import '../styles/ayrinti.scss'
+import {useState} from 'react'
 import Hamburger from '../components/hamburger'
 import { 
     Container,
@@ -47,9 +48,24 @@ const Cards = items => {
 }
 
 const Index = () => {
+    const [tiklanma,degistir]= useState(0)
+    const handleClick = e => {
+        const {value}=e.target
+        if(value==='0') {
+            degistir(tiklanma+1)
+        }
+        else if(value==='2'){
+            degistir(tiklanma*2)
+        }
+        else if(value==='3'){
+            degistir(0)
+        }
+        else {
+            degistir(tiklanma-1)
+        }
+    }
     return (
         <Layout>
-
             <div className='cards'>
                 <Container>
                     <Row>
@@ -59,6 +75,13 @@ const Index = () => {
                 </div>
                 <div className='ayrinti'>
                 <Container>
+                <div className='counter'>
+                    {tiklanma} kez tıkladınız.
+                    <button value='0' onClick={handleClick}>+</button>
+                    <button value='1' onClick={handleClick}>-</button>
+                    <button value='2' onClick={handleClick}>x2</button>
+                    <button value='3' onClick={handleClick}>Sıfırla</button>
+                </div>
                     <Row>
                         <Col sm='3' className='Calendar'>
                             <FontAwesomeIcon icon={faCalendar} className='fontawesome' size='5x' color='red'/>
