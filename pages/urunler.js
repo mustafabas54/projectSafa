@@ -13,52 +13,60 @@ import {
  } from 'reactstrap';
  import ProductModal from '../components/modal'
 
-
 const photos = [
     {
         id: 1,
         url: '/img/ciger.jpg',
-        name: 'Nefis Ciğer'
+        name: 'Nefis Ciğer',
+        price: ' 18 TL'
     },
     {
         id: 2,
         url: '/img/pilavciger.jpg',
-        name: 'Porsiyon Ciğer'
+        name: 'Porsiyon Ciğer',
+        price: ' 18 TL'
     },
     {
         id: 3,
         url: '/img/ekmekciger.jpg',
-        name: 'Ekmek Arası Ciğer'
+        name: 'Ekmek Arası Ciğer',
+        price: ' 12 TL'
     },
     {
         id: 4,
         url: '/img/etdoner.jpg',
-        name: 'Pilav Üstü Et Döner'
+        name: 'Pilav Üstü Et Döner',
+        price: ' 24 TL'
     },
     {
         id: 5,
         url: '/img/etdurum.jpg',
-        name: 'Et Dürüm'
+        name: 'Et Dürüm',
+        price: ' 13 TL'
     },
     {
         id: 6,
         url: '/img/pideet.jpg',
-        name: 'Pide Et'
+        name: 'Pide Et',
+        price :' 13 TL'
     },
     {
         id: 7,
         url: '/img/pidetavuk.jpg',
-        name: 'Pide Tavuk'
+        name: 'Pide Tavuk',
+        price: ' 8 TL'
     },
     {
         id: 8,
         url: '/img/pilavustutavuk.jpg',
-        name: 'Pilav Üstü Tavuk'
+        name: 'Pilav Üstü Tavuk',
+        price: ' 15 TL'
     },
     {
         id: 9,
         url: '/img/durumtavuk.jpg',
-        name: 'Dürüm Tavuk'
+        name: 'Dürüm Tavuk',
+        price: ' 8 TL'
     },
 ]
 
@@ -99,15 +107,14 @@ const Urunler = () => {
                 <Row>
                     {ImgCards(photos)}
                 </Row>
-
                 </Container>
             </div>
             <ProductModal 
                 modal = {showProductModal}
                 toggle = {toggleProductModal}
                 url = {photos[clickedPhotoId].url}
-                className = {'product-modal'} 
                 name = {photos[clickedPhotoId].name}
+                price = {photos[clickedPhotoId].price}
             />
         </Layout>
     )

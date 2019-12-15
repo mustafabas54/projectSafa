@@ -50,7 +50,7 @@ const Cards = fiyats => {
 const fiyatListesi = () => {
     return (
         <Layout>
-            <div className='cards'>
+            <div className='cards mt-3'>
                 <Container>
                     <Row> 
                         {Cards(fiyats)}

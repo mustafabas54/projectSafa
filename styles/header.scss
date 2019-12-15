@@ -2,7 +2,7 @@
     position: relative;
     width: 100vw;
     height: 150px;
-    background: $main-bg;
+    background: white;
     margin: 0;
     padding: 0;
     left: 0;
@@ -12,7 +12,7 @@
     position: absolute;
     width: 100vw;
     height: 50px;
-    background: $main-color;
+    background: $font-color;
     transform: translateY(-50%);
     top: 50%;  
     border: 2px solid $border-color;
@@ -46,7 +46,6 @@
         padding-left: 30px;
         font-weight: 500;
         font-size: 1.2rem;
-        color: rgb(201, 200, 199);
         text-decoration: none; 
     } 
 }
@@ -73,12 +72,12 @@
 }
 .header-menu-link {
     margin: 10px;
-    color: rgb(19, 255, 235);
+    color: white;
     text-decoration: none;
-    transition: .4s;
+    transition: 1s;
     &:hover {
-        color: tomato;
-        transition: .4s;
+        color: red;
+        transition: 1s;
         text-decoration: none;
     }
 }

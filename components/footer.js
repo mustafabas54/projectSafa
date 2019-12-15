@@ -1,6 +1,4 @@
 import '../styles/footer.scss'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faNewspaper, faCamera, faComments, faFemale } from '@fortawesome/free-solid-svg-icons'
 import { 
     Container,
     Row,
@@ -10,7 +8,7 @@ import {
 
 const Footer = () => {
     return (
-        <div className='footer'>
+        <div className='footer mt-5'>
         <Container className='container'>
             <Row className='row'>
                 <Col sm='4'>
@@ -37,7 +35,7 @@ const Footer = () => {
                     </Col>
                 </Row>
         </Container>
-        <div class="footer-copyright">
+        <div class="footer-copyright mt-3">
             <p>© 2019 Copyright Tüm Hakları Saklıdır. Mustafa BAŞ ~ </p>
         </div>
         </div>

@@ -6,7 +6,8 @@ const ProductModal = (props) => {
     toggle,
     className,
     url,
-    name
+    name,
+    price
   } = props;
 
 console.log(className)
@@ -17,8 +18,9 @@ console.log(className)
         <ModalBody>
             <img src={url} alt='photo'/>
         </ModalBody>
+        <h4 toggle={toggle}>{price}</h4>
         <ModalFooter>
-          <Button color="danger" onClick={toggle}>Cancel</Button>
+          <Button color="danger" onClick={toggle}>Kapat</Button>
         </ModalFooter>
       </Modal>
     </div>

@@ -47,23 +47,8 @@ const Cards = items => {
     )
 }
 
+
 const Index = () => {
-    const [tiklanma,degistir]= useState(0)
-    const handleClick = e => {
-        const {value}=e.target
-        if(value==='0') {
-            degistir(tiklanma+1)
-        }
-        else if(value==='2'){
-            degistir(tiklanma*2)
-        }
-        else if(value==='3'){
-            degistir(0)
-        }
-        else {
-            degistir(tiklanma-1)
-        }
-    }
     return (
         <Layout>
             <div className='cards'>
@@ -75,28 +60,21 @@ const Index = () => {
                 </div>
                 <div className='ayrinti'>
                 <Container>
-                <div className='counter'>
-                    {tiklanma} kez tıkladınız.
-                    <button value='0' onClick={handleClick}>+</button>
-                    <button value='1' onClick={handleClick}>-</button>
-                    <button value='2' onClick={handleClick}>x2</button>
-                    <button value='3' onClick={handleClick}>Sıfırla</button>
-                </div>
                     <Row>
                         <Col sm='3' className='Calendar'>
-                            <FontAwesomeIcon icon={faCalendar} className='fontawesome' size='5x' color='red'/>
-                            <h4>Günün Menüsü</h4>
+                            <FontAwesomeIcon icon={faCalendar} className='fontawesome' size='5x' />
+                            <h4> <a href='/modaltwo'> Günün Menüsü</a></h4>
                         </Col>
                         <Col sm='3' className='Calendar'>
-                            <FontAwesomeIcon icon={faCamera} className='fontawesome' size='5x' color='red'/>
-                            <h4><a href='/urunler'>GaleRi</a></h4>
+                            <FontAwesomeIcon icon={faCamera} className='fontawesome' size='5x' />
+                            <h4>Galeri</h4>
                         </Col>
                         <Col sm='3' className='Calendar'>
-                            <FontAwesomeIcon icon={faNewspaper} className='fontawesome' size='5x' color='red'/>
+                            <FontAwesomeIcon icon={faNewspaper} className='fontawesome' size='5x' />
                             <h4>Basında Biz</h4>
                         </Col>
                         <Col sm='3' className='Calendar'>
-                            <FontAwesomeIcon icon={faComments} className='fontawesome' size='5x' color='red'/>
+                            <FontAwesomeIcon icon={faComments} className='fontawesome' size='5x' />
                             <h4>Müşteri Yorumları</h4>
                         </Col>
                     </Row>

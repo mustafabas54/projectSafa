@@ -2,6 +2,7 @@
     width: 100%;
     object-fit: cover;
     height: 250px;
+    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.2);
 }
 .flip-card {
     background-color: transparent;
@@ -35,21 +36,25 @@
   }
   
   .flip-card-front {
-    background-color: #a7a9aa;
+    background-color: transparent;
     color: rgb(5, 61, 43);
     font-family: fantasy;
+    border : 1px solid $font-color;
+    border-radius: 8px;
   }
   
   .flip-card-back {
-    background-color: #a7a9aa;
+    background-color: transparent;
     color: rgb(5, 61, 43);
     transform: rotateY(180deg);
     font-family: fantasy;
     text-transform: uppercase;
+    border : 1px solid $font-color;
+    border-radius: 8px;
   }
 
   .fontawesome{
-    color: rgb(255, 2, 2);
+    color: $font-color;
     transition: 1s;
     left: 50%;
     cursor: pointer;
@@ -60,20 +65,27 @@
     }
   }
   .Calendar {
-    border-right: 1px solid rgb(243, 10, 10);
+    border-right: 1px solid $font-color;
     text-align: center;
     padding: 20px;
     margin: 0;
     &:hover {
       border-right: none;
-      border: 2px solid rgb(243, 10, 10);
       transition : 1s ;
+      border-right: 1px solid $font-color;
     }
   }
   .Calendar:last-child{
     border-right: none;
     &:hover {
-      border: 2px solid rgb(243, 10, 10);
       transition : 1s ;
     }
+  }
+  .Calendar h4 {
+    color: $red-color;
+    
+  }
+  .Calendar h4 a {
+    color: $red-color;
+    text-decoration: none;
   }
