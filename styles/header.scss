@@ -2,20 +2,23 @@
     position: relative;
     width: 100vw;
     height: 150px;
-    background: $main-color2;
+    background: rgb(134,25,24);
+    background: linear-gradient(90deg, rgba(134,25,24,1) 0%, rgba(75,19,19,1) 7%, rgba(162,34,33,1) 20%, rgba(110,3,2,1) 37%, rgba(172,13,11,1) 55%, rgba(110,3,2,1) 100%);
     margin: 0;
     padding: 0;
     left: 0;
     text-align: center;
+    border-bottom: 2px solid black;
 }
 .menu-bar {
     position: absolute;
     width: 100vw;
     height: 50px;
-    background: $font-color;
+    background: rgb(140,136,136);
+    background: linear-gradient(90deg, rgba(140,136,136,1) 0%, rgba(217,206,206,1) 6%, rgba(101,96,96,1) 70%, rgba(78,73,73,1) 96%);
     transform: translateY(-50%);
     top: 50%;  
-    border: 2px solid $border-color;
+    border: 1px solid black;
 }
 .logo-holder {
     position: absolute;
@@ -38,14 +41,13 @@
     list-style: none;
     display: flex;
     text-decoration: none;
-    color: white;
     position: absolute;
     top: 15%;
     & li {
-        font-family: inherit;
+        font-family: 'Permanent Marker', cursive;
         padding-left: 30px;
         font-weight: 500;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         text-decoration: none; 
     } 
 }
@@ -72,11 +74,11 @@
 }
 .header-menu-link {
     margin: 10px;
-    color: white;
+    color: rgb(19, 17, 17);
     text-decoration: none;
     transition: 1s;
     &:hover {
-        color: red;
+        color: rgb(90, 7, 7);
         transition: 1s;
         text-decoration: none;
     }

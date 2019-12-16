@@ -36,18 +36,23 @@
   }
   
   .flip-card-front {
-    background-color: transparent;
-    color: rgb(5, 61, 43);
-    font-family: fantasy;
+    background: rgb(221,208,208);
+    background: linear-gradient(90deg, rgba(221,208,208,1) 20%, rgba(172,163,163,1) 49%, rgba(244,234,234,1) 83%);
+    color: $font-color;
+    font-family: 'Lobster', cursive;
+    font-size: 1.1rem;
     border : 1px solid $font-color;
     border-radius: 8px;
   }
   
   .flip-card-back {
-    background-color: transparent;
-    color: rgb(5, 61, 43);
+
+    background: rgb(176,168,168);
+background: linear-gradient(90deg, rgba(176,168,168,1) 9%, rgba(156,151,151,1) 25%, rgba(144,139,139,1) 76%, rgba(139,133,133,1) 100%);
+    color: $font-color;
     transform: rotateY(180deg);
-    font-family: fantasy;
+    font-family: 'Lobster', cursive;
+    font-size: 1.0rem;
     text-transform: uppercase;
     border : 1px solid $font-color;
     border-radius: 8px;
@@ -84,8 +89,4 @@
   .Calendar h4 {
     color: $red-color;
     
-  }
-  .Calendar h4 a {
-    color: $red-color;
-    text-decoration: none;
   }

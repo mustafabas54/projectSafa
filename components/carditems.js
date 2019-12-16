@@ -2,24 +2,24 @@
 const items = [
     {
         url:"/img/ciger.jpg" , 
-        title:"DANA CİĞERİ",
+        title:"Dana Cigeri",
         id:1,
         description :"%100 Dana etidir. Halk dilinde 'Arnavut Ciğeri' de denen bu eşsiz lezzet salonumuzda servis edilmektedir..",
-        porFiyat: " Porsiyon : 18 ₺ ",
-        ekFiyat : "Ekmek Arası : 12 ₺ ",
-        dürFiyat : " Dürüm Arası : 12 ₺ ",
-        pidFiyat : "Pide Arası : 13 ₺"
+        porFiyat: " Porsiyon : 18 TL ",
+        ekFiyat : "Ekmek Arası : 12 TL ",
+        dürFiyat : " Dürüm Arası : 12 TL ",
+        pidFiyat : "Pide Arası : 13 TL"
 
     },
     {
         url:"/img/etdoner.jpg" , 
-        title:"ET DÖNERİ",
+        title:"Et Döneri",
         id:2,
         description :"Et dönerimiz eşsiz lezzeti ile salonumuzda servis edilmektedir.",
-        porFiyat: " Porsiyon : 24 ₺ ",
-        ekFiyat : "Ekmek Arası : 12 ₺ ",
-        dürFiyat : " Dürüm Arası : 12 ₺ ",
-        pidFiyat : "Pide Arası : 13 ₺"
+        porFiyat: " Porsiyon : 24 TL ",
+        ekFiyat : "Ekmek Arası : 12 TL ",
+        dürFiyat : " Dürüm Arası : 12 TL ",
+        pidFiyat : "Pide Arası : 13 TL"
     },
     {
         url:"/img/urunler.jpg" , 
@@ -30,7 +30,6 @@ const items = [
         porFiyat: " -Tavuk Döneri ",
         ekFiyat : " -Arnavut Ciğeri ",
         dürFiyat : " -Ürünlerimiz %100 HELAL Kesimdir. ",
-        pidFiyat : " -1. Sınıf Etten Üretilmektedir ."
         
     }
 ]

@@ -74,7 +74,7 @@ const Index = () => {
                     <Row>
                         <Col sm='3' className='Calendar'>
                             <FontAwesomeIcon icon={faCalendar} className='fontawesome' onClick={toggle} size='5x' />
-                            <h4> <a> Günün Menüsü</a></h4>
+                            <h4> Günün Menüsü</h4>
                         </Col>
                         <Col sm='3' className='Calendar'>
                             <FontAwesomeIcon icon={faCamera} className='fontawesome' size='5x' />
