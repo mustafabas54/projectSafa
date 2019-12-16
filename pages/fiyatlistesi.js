@@ -1,6 +1,5 @@
 import Layout from '../components/layout'
 import fiyats from '../components/fiyatlar'
-import '../styles/ayrinti.scss'
 import { 
     Container,
     Row,

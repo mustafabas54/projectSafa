@@ -1,24 +1,33 @@
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 const ProductModal = (props) => {
   const {
     modal,
     toggle,
-    className,
     url,
     name,
-    price
+    price,
+    next,
+    prev
   } = props;
 
-console.log(className)
   return (
     <div>
       <Modal isOpen={modal} toggle={toggle} className='product-modal'>
         <ModalHeader toggle={toggle}>{name}</ModalHeader>
         <ModalBody>
-            <img src={url} alt='photo'/>
+            <div className='img-area'>
+              <img src={url} alt='photo'/>
+              <button className='bttn prev' onClick={prev}>
+                <FontAwesomeIcon icon={faArrowLeft} size='3x' />
+              </button>
+              <button className='bttn next' onClick={next}>
+                <FontAwesomeIcon icon={faArrowRight} size='3x' />
+              </button>
+            </div>
+            <h4>{price}</h4>
         </ModalBody>
-        <h4 toggle={toggle}>{price}</h4>
         <ModalFooter>
           <Button color="danger" onClick={toggle}>Kapat</Button>
         </ModalFooter>

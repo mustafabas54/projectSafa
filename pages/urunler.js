@@ -1,5 +1,4 @@
 import Layout from '../components/layout'
-import '../styles/urunler.scss'
 import {useState} from 'react'
 import { 
     Container,
@@ -9,8 +8,7 @@ import {
     CardImg,
     CardText,
     CardBody,
-    CardTitle
- } from 'reactstrap';
+} from 'reactstrap';
  import ProductModal from '../components/modal'
 
 const photos = [
@@ -82,6 +80,21 @@ const Urunler = () => {
         let id = e.target.id - 1
         setId(id)
     }
+
+    const next = e => {
+        if(clickedPhotoId === 8){
+            setId(0)
+        }else{
+            setId(clickedPhotoId + 1)
+        }
+    }
+    const prev = e => {
+        if(clickedPhotoId === 0){
+            setId(8)
+        }else{
+            setId(clickedPhotoId - 1)
+        }
+    }
     
     const ImgCards = (photos) => {
         return (
@@ -115,6 +128,8 @@ const Urunler = () => {
                 url = {photos[clickedPhotoId].url}
                 name = {photos[clickedPhotoId].name}
                 price = {photos[clickedPhotoId].price}
+                next = {next}
+                prev = {prev}
             />
         </Layout>
     )

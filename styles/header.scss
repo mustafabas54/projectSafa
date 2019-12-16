@@ -2,7 +2,7 @@
     position: relative;
     width: 100vw;
     height: 150px;
-    background: white;
+    background: $main-color2;
     margin: 0;
     padding: 0;
     left: 0;
@@ -42,7 +42,7 @@
     position: absolute;
     top: 15%;
     & li {
-        font-family: inherit; ;
+        font-family: inherit;
         padding-left: 30px;
         font-weight: 500;
         font-size: 1.2rem;

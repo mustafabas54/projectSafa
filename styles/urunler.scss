@@ -26,6 +26,30 @@ h4 {
 .product-modal img{
     object-fit: cover;
     width: 100%;
+    transition: 1s;
+}
+
+.img-area{
+    position: relative;
+}
+
+.bttn{
+    position: absolute;
+    height: 100%;
+    background: transparent;
+    border: none;
+    color: white;
+    &:focus{
+        outline: 0;
+    }
+}
+
+.prev{
+    left: 0;
+}
+
+.next{
+    right: 0;
 }
 
 /*
