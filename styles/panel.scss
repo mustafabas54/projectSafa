@@ -1,0 +1,28 @@
+.panel-container{
+    background: tomato;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.login-card{
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.input-text{
+    width: 18%;
+}
+
+@media screen and (max-width: 824px){
+    .login-card{
+        width: 95%;
+    }
+    .input-text{
+        width: 27%;
+    }
+}

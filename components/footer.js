@@ -7,6 +7,7 @@ import {
 
 
 const Footer = () => {
+    let d = new Date()
     return (
         <div className='footer mt-5'>
         <Container className='container'>
@@ -36,7 +37,7 @@ const Footer = () => {
                 </Row>
         </Container>
         <div class="footer-copyright mt-3">
-            <p>© 2019 Copyright Tüm Hakları Saklıdır. Mustafa BAŞ ~ </p>
+            <p>© {d.getFullYear()} Copyright Tüm Hakları Saklıdır. Mustafa BAŞ ~ </p>
         </div>
         </div>
     )
