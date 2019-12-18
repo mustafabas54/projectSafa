@@ -2,7 +2,7 @@ export const Store = React.createContext();
 
 let loggedIn = false
 let gununMenusu = {
-    tipi: 'Firsat Menu'
+    tipi: 'Firsat Menusu'
 }
 
 const initialState = { 
@@ -14,6 +14,8 @@ function reducer(state, action) {
     switch (action.type) {
       case 'LOGIN':
         return { ...state, loggedIn: action.payload };
+      case 'GM':
+        return { ...state, gununMenusu: action.payload };
       default:
         return state;
     }

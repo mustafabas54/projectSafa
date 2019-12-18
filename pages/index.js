@@ -2,9 +2,10 @@ import Layout from '../components/layout'
 import items from '../components/carditems'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faNewspaper, faCamera, faComments, faCalendar } from '@fortawesome/free-solid-svg-icons'
-import {useState} from 'react'
+import { useState } from 'react'
 import Head from 'next/head'
 import Hamburger from '../components/hamburger'
+import { StoreProvider, Store } from '../Store'
 import { 
     Button,
     Modal, ModalHeader, ModalBody, ModalFooter,
@@ -51,12 +52,11 @@ const Cards = items => {
 
 
 const Index = () => {
-
+    const { state, dispatch } = React.useContext(Store)
     const [modal, setModal] = useState(false);
 
     const toggle = () => setModal(!modal);
     const closeBtn = <button className="close" onClick={toggle}>&times;</button>;
-
     return (
         <Layout>
             <Head>
@@ -89,20 +89,28 @@ const Index = () => {
                             <h4>Müşteri Yorumları</h4>
                         </Col>
                     </Row>
-                    <Modal isOpen={modal} toggle={toggle}>
-                    <ModalHeader toggle={toggle} close={closeBtn}>ET İSKENDER !</ModalHeader>
-                    <ModalBody>
-                        <img src='/img/etiskender.jpg' className='etisk'></img>
-                        <h5>Enfes yaprak dönerinin tadını siz değerli müşterilerimize özel menü şeklinde servis ediyoruz. Bu günümüzün menüsü ET İSKENDER ! İçecek + tatlı konseptimizle sadece 25TL!</h5>
-                    </ModalBody>
-                    <ModalFooter>
-                        <Button color="secondary" onClick={toggle}>Kapat</Button>
-                    </ModalFooter>
-                    </Modal>
-                </Container>
-                </div>
-            
+                        <Modal isOpen={modal} toggle={toggle}>
+                        <ModalHeader toggle={toggle} close={closeBtn}>{state.gununMenusu.tipi}</ModalHeader>
+                        <ModalBody>
+                            <img src='/img/etiskender.jpg' className='etisk'></img>
+                            <h5>Enfes yaprak dönerinin tadını siz değerli müşterilerimize özel menü şeklinde servis ediyoruz. Bu günümüzün menüsü ET İSKENDER ! İçecek + tatlı konseptimizle sadece 25TL!</h5>
+                        </ModalBody>
+                        <ModalFooter>
+                            <Button color="secondary" onClick={toggle}>Kapat</Button>
+                        </ModalFooter>
+                        </Modal>
+                    </Container>
+                </div>  
         </Layout>
     )
 }
-export default Index
+
+const HOC = () => {
+    return(
+        <StoreProvider>
+            <Index />
+        </StoreProvider>
+    )
+}
+
+export default HOC
