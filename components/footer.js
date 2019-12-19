@@ -10,36 +10,27 @@ const Footer = () => {
     let d = new Date()
     return (
         <div className='footer mt-5'>
-        <Container className='container'>
-            <Row className='row'>
-                <Col sm='4'>
-                    <h5>Ürünlerimiz</h5>
-                    <ul>
-                        <li><a href="#">Et Döneri</a></li>
-                        <li><a href="#">Tavuk Döneri</a></li>
-                        <li><a href="#">Dana ( Arnavut ) Ciğeri</a></li>
-                    </ul>
-                </Col>
-                <Col sm='4'>
-                    <h5>Fiyat Listemiz</h5>
-                    <ul>
-                        <li><a href="#">Fiyat Listemiz için tıklayınız</a></li>
-                    </ul>
-                </Col>
-                <Col sm='4'>
-                    <h5>İletişim</h5>
-                    <ul>
-                        <li><a href="#">Sosyal Medya</a></li>
-                        <li><a href="#">Telefon</a></li>
-                        <li><a href="#">Adres</a></li>
-                    </ul>
-                    </Col>
-                </Row>
-        </Container>
-        <div class="footer-copyright mt-3">
-            <p>© {d.getFullYear()} Copyright Tüm Hakları Saklıdır. Mustafa BAŞ ~ </p>
+            <div className="all ">
+                <div className="lefter">
+                    <div className="text">İletişim</div>
+                </div>
+                <div className="left">
+                    <div className="text">Çalışma Saatlerimiz</div>
+                </div>
+                <div className="center">
+                    <div className="explainer"><span> AÇ </span></div>
+                    <div className="text">Menüler</div>
+                </div>
+                <div className="right">
+                    <div className="text">Müşteri Yorumları</div>
+                </div>
+                <div className="righter">
+                    <div className="text">Arama</div>
+                </div>
+            </div>
+            <a href="http://facebook.com/mustafaxz" target="_blank" className="ref">🔗 Mustafa Baş</a>
         </div>
-        </div>
+        
     )
 }
 export default Footer
